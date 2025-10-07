@@ -1,4 +1,4 @@
-//right triangle
+//left number triangle
 #include<stdio.h>
 int main()
  {  
