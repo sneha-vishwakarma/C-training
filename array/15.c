@@ -1,0 +1,1 @@
+//shifting using logic gates operation
