@@ -1,17 +1,20 @@
-#include<stdio.h>
-int palindrome(int arr[],int i, int j)
-{
-    if(i>=j){
-        return 1;
-    }
-    if (arr[i]!=arr[j]){
-        return 0;
-    }
-    return palindrome(arr,++i,--j);
+// Q10: Check if a string is palindrome using recursion
+#include <stdio.h>
+#include <string.h>
 
+int isPalindrome(char str[], int start, int end) {
+    if (start >= end)
+        return 1; // base case: palindrome
+    if (str[start] != str[end])
+        return 0; // not palindrome
+    return isPalindrome(str, start + 1, end - 1);
 }
-  int main(){
-  int a[3]={1,2,1};
-  int startindex=0;
-  int 
-  }
+
+int main() {
+    char str[] = "level";
+    if (isPalindrome(str, 0, strlen(str) - 1))
+        printf("Palindrome");
+    else
+        printf("Not Palindrome");
+    return 0;
+}
